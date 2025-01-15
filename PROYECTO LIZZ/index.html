@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Reservación de Citas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-calendar-check"></i>
+        <span>AgendaFacil</span>
+      </div>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#reservation-form">Reservar</a></li>
+        <li><a href="#reservations">Mis Citas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>Reserva tu cita en segundos</h1>
+      <p>Simplifica tu vida con nuestro sistema de reservaciones</p>
+      <a href="#reservation-form" class="cta-button">Reservar ahora</a>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Nuestros Servicios</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <i class="fas fa-cut"></i>
+          <h3>Corte de pelo</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-brain"></i>
+          <h3>Psicólogo</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-hand-holding-medical"></i>
+          <h3>Fisioterapeuta</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-apple-alt"></i>
+          <h3>Nutrióloga</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-paw"></i>
+          <h3>Veterinario</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservation-form" class="reservation-form">
+      <h2>Reservar una Cita</h2>
+      <form id="reservationForm">
+        <div class="form-group">
+          <label for="service">Servicio:</label>
+          <select id="service" required>
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="Corte de pelo">Corte de pelo</option>
+            <option value="Psicologo">Psicólogo</option>
+            <option value="Fisioterapeuta">Fisioterapeuta</option>
+            <option value="Nutriologa">Nutrióloga</option>
+            <option value="Veterinario">Veterinario</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Fecha:</label>
+          <input type="date" id="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Hora:</label>
+          <select id="time" required>
+            <option value="" disabled selected>Selecciona una hora</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" required>
+        </div>
+
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+
+    <section id="reservations" class="reservations">
+      <h2>Mis Citas Programadas</h2>
+      <ul id="reservationList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 AgendaFacil. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="notification" class="notification hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
